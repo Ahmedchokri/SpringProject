@@ -32,10 +32,7 @@ public class Client implements Serializable {
 	private Profession profession ;
 	
 	
-	public Client() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+	
 	public Client( long idclient , String nom, String prenom, String email, String password) {
 		this.nom = nom;
 		this.prenom = prenom;
