@@ -72,5 +72,10 @@ public class ClientServiceImpl implements ClientService{
 		
 		return clientrepository.deleteClientByCategorieClientAndProfession(categorieclient, profession);
 	}
+	@Override
+	public long insertClient(String nom, String prenom,String dateNaissance,  String email,String password,  Profession profession, Categorieclient categorieClient) {
+		
+		return clientrepository.insertClient(nom, prenom, dateNaissance, email, password, profession, categorieClient);
+	}
     
 }

@@ -17,5 +17,5 @@ public interface ClientService {
 	List<Client> retrieveClientsByProfession(Profession prof);
 	long updateClientCategorieByProfession(Categorieclient categorieClient,Profession profession);
 	long deleteClientByCategorieClientAndProfessionb(Categorieclient categorieclient,Profession profession);
-	
+	long insertClient(String nom, String prenom,String dateNaissance,  String email,String password,  Profession profession, Categorieclient categorieClient);
 }
