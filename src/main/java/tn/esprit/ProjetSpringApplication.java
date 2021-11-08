@@ -42,8 +42,8 @@ public class ProjetSpringApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-	Client c = new Client( 9,"baha","chokri","ahmed.chokri@esprit.tn","1234");
-	cs.updateClient(c);
+	//Client c = new Client( 9,"baha","chokri","ahmed.chokri@esprit.tn","1234");
+	//cs.updateClient(c);
 	}
 
 }

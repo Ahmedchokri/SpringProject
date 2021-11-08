@@ -24,8 +24,7 @@ public class ClientServiceImpl implements ClientService{
 
 	@Override
 	public Client addClient(Client u) {
-		 List <Client> clients = null ;
-		 clients.add(clientrepository.save(u));
+		clientrepository.save(u);
 		return u ;
 	}
 

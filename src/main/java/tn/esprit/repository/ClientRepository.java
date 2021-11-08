@@ -19,7 +19,7 @@ public interface ClientRepository extends CrudRepository<Client,Long>{
 	List<Client> retrieveClientsByProfession(@Param("profession") Profession profession);
 	
 	@Modifying
-	@Query("update Client c set c.categorieclient = :categorie where c.profession =:profession")
+	@Query("Update Client c set c.categorieclient = :categorie where c.profession =:profession")
 	long updateClientCategorieByProfession(@Param("categorie") Categorieclient categorieClient, @Param("profession") Profession profession);
 	
 	@Modifying

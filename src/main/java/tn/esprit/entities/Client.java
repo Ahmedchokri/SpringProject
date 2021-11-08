@@ -33,12 +33,14 @@ public class Client implements Serializable {
 	
 	
 	
-	public Client( long idclient , String nom, String prenom, String email, String password) {
+	public Client( String nom, String prenom, String email, String password) {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.email = email;
 		this.password = password;
-	this.idclient=idclient;
+
+	}
+	public Client() {
 	}
 	@OneToMany(cascade = CascadeType.ALL,mappedBy="client")
 	private Set<Facture> factures ;
