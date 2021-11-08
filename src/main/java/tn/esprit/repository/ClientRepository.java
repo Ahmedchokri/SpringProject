@@ -26,5 +26,8 @@ public interface ClientRepository extends CrudRepository<Client,Long>{
 	@Query("DELETE FROM Client c WHERE c.categorieclient= :categorie AND c.profession =:profession")
 	long deleteClientByCategorieClientAndProfession(@Param("categorie") Categorieclient categorieclient, @Param("profession") Profession profession);
 	
+	@Modifying
+	@Query(value = "INSERT INTO Client (nom, prenom,dateNaissance,email,password,profession,categorieClient) VALUES (:nom,:prenom, :dateN, :email, :password, :profession, :categorieClient)",nativeQuery = true)
+	long insertClient(@Param("nom") String nom, @Param("prenom") String prenom,@Param("dateN") 	String dateNaissance, @Param("email") String email, @Param("password") String password, @Param("profession") Profession profession, @Param("categorieClient") Categorieclient categorieClient);
 	
 }
